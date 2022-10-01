@@ -1,9 +1,33 @@
 @use 'var';
 
+@font-face {
+  font-family: 'Pluto Cond';
+  src: url('../resources/fonts/pluto-cond-regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Pluto Cond';
+  src: url('../resources/fonts/pluto-cond-medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Pluto Cond';
+  src: url('../resources/fonts/pluto-cond-bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #333;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Pluto Cond', sans-serif;
+
+  background-color: #333;
+  height: 10000px;
 }
 
 a {

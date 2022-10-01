@@ -1,60 +1,22 @@
-@font-face {
-  font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-regular.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-medium.woff2") format("woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-bold.woff2") format("woff2");
-  font-weight: 700;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Pluto Cond", sans-serif;
-  background-color: #333;
-  height: 10000px;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  border: none;
-}
-button:hover {
-  cursor: pointer;
-}
-
-ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+@use '../general/var';
 
 .the-header {
   position: sticky;
   top: 0;
+
   height: 100px;
-  background-color: rgb(0, 87, 184);
-  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.45);
+
+  background-color: var.$dark-blue;
+  box-shadow: 0 0 35px 0 rgba(0,0,0,.45);
 }
 
 .the-header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   height: 100%;
-  max-width: 1600px;
+  max-width: var.$max-width;
   margin: auto;
   padding: 0 16px;
 }
@@ -65,19 +27,21 @@ ul, ol {
 
 .the-header__nav {
   display: none;
+
   position: absolute;
   top: 100px;
   left: -100%;
+
   width: 100%;
   height: calc(100vh - 100px);
+
   background-color: rgb(255, 255, 255);
+
   transition: 300ms;
 }
-
 .the-header__nav--visible-phase-1 {
   display: block;
 }
-
 .the-header__nav--visible-phase-2 {
   left: 0;
 }
@@ -87,6 +51,7 @@ ul, ol {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 4px;
+
   height: 100%;
   padding: 4px;
 }
@@ -95,14 +60,17 @@ ul, ol {
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100%;
+
   font-size: 24px;
   color: rgb(255, 255, 255);
-  background-color: rgb(0, 192, 243);
+  background-color: var.$light-blue;
   font-weight: bold;
-}
-.the-header__nav-list-link:hover {
-  background-color: rgb(0, 172, 243);
+
+  &:hover {
+    background-color: var.$light-blue-accent;
+  }
 }
 
 .the-header__buttons-container {
@@ -114,18 +82,21 @@ ul, ol {
 .language-chooser {
   position: relative;
 }
+.language-chooser--open {
+  .language-chooser__list-container {
+    display: block;
+  }
 
-.language-chooser--open .language-chooser__list-container {
-  display: block;
-}
-.language-chooser--open .language-chooser__arrow-icon {
-  transform: rotateZ(180deg);
+  .language-chooser__arrow-icon {
+    transform: rotateZ(180deg);
+  }
 }
 
 .language-chooser__button {
   display: flex;
   align-items: center;
   gap: 8px;
+
   background-color: transparent;
 }
 
@@ -139,10 +110,13 @@ ul, ol {
 
 .language-chooser__list-container {
   display: none;
+
   position: absolute;
   top: 125%;
   right: 0;
+
   padding: 8px 0 8px 6px;
+
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
@@ -157,14 +131,17 @@ ul, ol {
   display: flex;
   align-items: center;
   column-gap: 8px;
+
   padding: 4px 0 4px 8px;
+
   font-size: 14px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   border-radius: 8px;
-}
-.language-chooser__list-link:hover {
-  background-color: rgb(240, 240, 240);
+
+  &:hover {
+    background-color: rgb(240, 240, 240);
+  }
 }
 
 .the-header__menu-button {
@@ -176,32 +153,38 @@ ul, ol {
   display: none;
 }
 
-@media (min-width: 980px) {
+@media(min-width: 980px) {
   .the-header {
     height: 130px;
   }
+
   .the-header__nav {
     display: block;
     position: static;
+
     width: auto;
     height: auto;
+
     background-color: transparent;
   }
+
+
   .the-header__nav-list {
     display: flex;
     gap: 48px;
+
     padding: 0;
   }
+
   .the-header__nav-list-link {
     background-color: transparent;
+    &:hover {
+      color: var.$light-blue;
+      background-color: transparent;
+    }
   }
-  .the-header__nav-list-link:hover {
-    color: rgb(0, 192, 243);
-    background-color: transparent;
-  }
+
   .the-header__menu-button {
     display: none;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
