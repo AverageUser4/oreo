@@ -1,5 +1,6 @@
 import MenuHandler from './classes/MenuHandler.js';
 import LanguageChooserHandler from './classes/LanguageChooserHandler.js';
+import CarouselHandler from './classes/CarouselHandler.js';
 
 // TEMPORARY *************************************
 const links = document.querySelectorAll('a');
@@ -9,3 +10,4 @@ for(let val of links)
 
 const menuHandler = new MenuHandler();
 const languageChooserHandler = new LanguageChooserHandler();
+const carouselHandler = new CarouselHandler();
