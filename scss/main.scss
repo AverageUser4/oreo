@@ -1,7 +1,15 @@
 @use 'general/global';
 
-@use 'misc/header';
+@use 'misc/curvy-two-line-heading';
+
+@use 'other/header';
 
 @use 'main/carousel';
 
 @use 'main/chill-out';
+
+@use 'main/join-world';
+
+@use 'main/news-section';
+
+@use 'other/footer';

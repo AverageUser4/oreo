@@ -197,6 +197,7 @@
   .the-header__nav-list-link {
     font-size: 18px;
     background-color: transparent;
+    transition: color 300ms;
 
     &:hover {
       color: var.$light-blue;

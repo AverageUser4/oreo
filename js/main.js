@@ -13,3 +13,7 @@ const menuHandler = new MenuHandler();
 const languageChooserHandler = new LanguageChooserHandler();
 const carouselHandler = new CarouselHandler();
 const headerHandler = new HeaderHandler();
+
+document.querySelector('.the-footer__go-up-button').addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});

@@ -18,18 +18,16 @@
   z-index: 1;
 }
 
-.chill-out__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.chill-out__heading-top-text {
+  font-size: 24px;
+}
 
-  margin: 0;
+.chill-out__heading-bottom-text {
+  font-size: 36px;
 }
 
 .chill-out__heading-svg-2 {
-  position: relative;
-  top: -18px;
+  margin-top: -34px;
 }
 
 .chill-out__product-container {
@@ -52,6 +50,7 @@
   font-size: 24px;
   color: rgb(255, 255, 255);
   font-weight: bold;
+  transition: color 300ms;
 
   &:hover {
     color: var.$dark-blue;
@@ -104,5 +103,19 @@
 @keyframes chill-out-drawing-3-animation {
   to {
     transform: translateY(-50px);
+  }
+}
+
+@media(min-width: 680px) {
+  .chill-out__heading-top-text {
+    font-size: 36px;
+  }
+  
+  .chill-out__heading-bottom-text {
+    font-size: 56px;
+  }
+  
+  .chill-out__heading-svg-2 {
+    margin-top: -18px;
   }
 }
