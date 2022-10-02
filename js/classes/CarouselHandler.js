@@ -7,9 +7,9 @@ export default class CarouselHandler {
   constructor() {
     this.carousel = document.querySelector('.carousel');
     this.pictureTags = this.carousel.querySelectorAll('.carousel__picture');
-    this.visiblePicture = this.carousel.querySelector('.carousel__picture:not(.carousel__picture--invisible)');
+    this.visiblePicture = this.pictureTags[0];
 
-    setInterval(() => this.changeVisiblePicutre(), 1000);
+    setInterval(() => this.changeVisiblePicutre(), 5000);
   }
 
   changeVisiblePicutre() {
@@ -17,27 +17,18 @@ export default class CarouselHandler {
     if(!next)
       next = this.pictureTags[0];
 
-    // phase-1 = opacity: 0
-    // phase-2 = display: none
+    // invisible - display: none
 
-    this.visiblePicture.classList.add('carousel__picture--invisible-phase-1');
-    next.classList.remove('carousel__picture--invisible-phase-2');
-
-    setTimeout(() => {
-      next.classList.remove('carousel__picture--invisible-phase-1');
-    });
+    this.visiblePicture.style.zIndex = 1;
+    this.visiblePicture.style.opacity = 0;
+    next.classList.remove('carousel__picture--invisible');
 
     setTimeout(() => {
-      this.visiblePicture.classList.add('carousel__picture--invisible-phase-2');
+      this.visiblePicture.style.zIndex = 0;
+      this.visiblePicture.style.opacity = 1;
+      this.visiblePicture.classList.add('carousel__picture--invisible');
       this.visiblePicture = next;
     }, 300);
   }
-
-  /*
-    - seems like 'next' element doesn't need to be transitioned from opacity: 0,
-    probably will make transition a bit smoother if removed,
-    maybe will try it later
-    - transition doesn't get applied when the page is scrolled down (even just a bit)
-  */
 
 }

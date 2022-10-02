@@ -1,6 +1,9 @@
 @use '../general/var';
 
 .carousel {
+  // display: flex; puts .carousel__picture's in the stacking context
+  display: flex;
+
   position: relative;
 
   background-color: var.$light-blue;
@@ -12,11 +15,7 @@
   transition: opacity 300ms;
 }
 
-.carousel__picture--invisible-phase-1 {
-  opacity: 0;
-}
-
-.carousel__picture--invisible-phase-2 {
+.carousel__picture--invisible {
   display: none;
 }
 

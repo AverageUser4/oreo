@@ -1,14 +1,23 @@
 @use '../general/var';
 
+.header-placeholder {
+  height: 100px;
+  background-color: var.$dark-blue;
+}
+
 .the-header {
-  position: sticky;
+  position: fixed;
   top: 0;
 
   height: 100px;
+  width: 100%;
   z-index: 5;
 
   background-color: var.$dark-blue;
   box-shadow: 0 0 35px 0 rgba(0,0,0,.45);
+}
+.the-header--shrunk.the-header--shrunk {
+  height: 100px;
 }
 
 .the-header__content {
@@ -159,8 +168,13 @@
 }
 
 @media(min-width: 980px) {
+  .header-placeholder {
+    height: 130px;
+  }
+
   .the-header {
     height: 130px;
+    transition: height 300ms;
   }
 
   .the-header__nav {
@@ -196,6 +210,10 @@
 }
 
 @media(min-width: 1280px) {
+  .header-placeholder {
+    height: 160px;
+  }
+
   .the-header {
     height: 160px;
   }
