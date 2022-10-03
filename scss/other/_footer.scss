@@ -13,10 +13,11 @@
 }
 
 .the-footer__link {
-  color: white;
-  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(255, 255, 255);
+  transition: 300ms;
   &:hover {
-    text-decoration: none;
+    text-decoration-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -24,7 +25,7 @@
   padding: 0;
   font-size: 14px;
   background: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .the-footer__top-text {

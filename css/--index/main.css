@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-regular.woff2") format("woff2");
+  src: url("../../resources/fonts/pluto-cond-regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-medium.woff2") format("woff2");
+  src: url("../../resources/fonts/pluto-cond-medium.woff2") format("woff2");
   font-weight: 500;
 }
 @font-face {
   font-family: "Pluto Cond";
-  src: url("../resources/fonts/pluto-cond-bold.woff2") format("woff2");
+  src: url("../../resources/fonts/pluto-cond-bold.woff2") format("woff2");
   font-weight: 700;
 }
 * {
@@ -666,18 +666,19 @@ ul, ol {
 }
 
 .the-footer__link {
-  color: white;
-  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(255, 255, 255);
+  transition: 300ms;
 }
 .the-footer__link:hover {
-  text-decoration: none;
+  text-decoration-color: rgba(255, 255, 255, 0);
 }
 
 .the-footer__go-up-button {
   padding: 0;
   font-size: 14px;
   background: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .the-footer__top-text {
