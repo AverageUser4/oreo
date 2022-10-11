@@ -1,0 +1,9 @@
+@use 'shared/global';
+
+@use 'shared/header';
+@use 'shared/footer';
+
+@use '--index/main/carousel';
+@use '--index/main/chill-out';
+@use '--index/main/join-world';
+@use '--index/main/news-section';

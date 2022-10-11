@@ -1,4 +1,4 @@
-@use '../../general/var';
+@use '../../shared/var';
 
 .join-world {
   background: var.$dark-blue radial-gradient(var.$light-blue, var.$dark-blue) no-repeat fixed;
@@ -16,6 +16,14 @@
 .join-world-not-images {
   position: relative;
   z-index: 1;
+}
+
+.join-world__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
 }
 
 .join-world__heading-top-text {

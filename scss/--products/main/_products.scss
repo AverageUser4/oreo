@@ -1,10 +1,13 @@
-@use '../../../scss/general/var';
+@use '../../shared/var';
 
 .products {
   background: var.$different-blue radial-gradient(var.$light-blue, var.$different-blue);
+  overflow: hidden;
 }
 
 .products-content {
+  position: relative;
+
   max-width: var.$max-width;
   margin: auto;
   padding: 128px 0;
@@ -62,6 +65,24 @@
   &:hover {
     color: var.$dark-blue;
   }
+}
+
+.products__drawing {
+  position: absolute;
+}
+
+.products__drawing-1 {
+  left: 0;
+  bottom: -40px;
+
+  width: clamp(140px, 30vw, 220px);
+}
+
+.products__drawing-2 {
+  right: 0;
+  bottom: -30px;
+
+  width: clamp(185px, 38vw, 290px);
 }
 
 @media(min-width: 860px) {

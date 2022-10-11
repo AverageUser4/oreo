@@ -1,4 +1,4 @@
-@use '../../general/var';
+@use '../../shared/var';
 
 .chill-out {
   overflow: hidden;
@@ -16,6 +16,14 @@
 .chill-out-not-images {
   position: relative;
   z-index: 1;
+}
+
+.chill-out__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
 }
 
 .chill-out__heading-top-text {
