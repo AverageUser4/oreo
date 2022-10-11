@@ -1,0 +1,68 @@
+@use '../../shared/var';
+
+.contact-us {
+  background-image: radial-gradient(rgb(0, 192, 243), rgb(51, 109, 178));
+}
+
+.contact-us-content {
+  max-width: var.$max-width;
+  margin: auto;
+  padding: 80px 32px 100px;
+
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.contact-us__heading {
+  margin: 0;
+}
+
+.contact-us__heading-svg {
+  width: 400px;
+}
+
+.contact-us__paragraph {
+  max-width: 540px;
+  margin: 0 auto 48px;
+
+  font-size: 14px;
+  line-height: 160%;
+
+  span {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .special-span {
+    margin: 0;
+  }
+
+  .bold-span {
+    font-weight: bold;
+  }
+}
+
+.contact-us__button {
+  padding: 12px 32px;
+
+  background-color: var.$dark-blue;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 12px;
+
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@media(min-width: 760px) {
+  .contact-us__heading-svg {
+    width: 647px;
+  }
+
+  .contact-us__paragraph {
+    font-size: 16px;
+  }
+}

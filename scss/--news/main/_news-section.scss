@@ -1,2 +1,40 @@
 @use '../../shared/var';
 @use '../../shared/news-section';
+
+.news-section-content {
+  padding: 64px 32px 128px;
+}
+
+.news-section__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  
+  margin: 0 0 64px;
+}
+
+.news-section__heading-svg {
+  display: block;
+}
+
+.news-section__heading-svg-2 {
+  margin-top: -55px;
+}
+
+.news-section__drawing {
+  position: absolute;
+}
+
+.news-section__drawing-1 {
+  bottom: -30px;
+  left: -140px;
+
+  width: clamp(350px, 40vw, 580px);
+}
+
+.news-section__drawing-2 {
+  bottom: -30px;
+  right: -100px;
+
+  width: clamp(250px, 30vw, 400px);
+}
